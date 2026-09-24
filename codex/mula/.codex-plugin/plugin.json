@@ -1,0 +1,38 @@
+{
+  "name": "mula",
+  "version": "0.5.0",
+  "description": "Keep Mula current with your coding work. One prompt signs you in, turns on automatic updates for the project you approve, and imports its recent history; you can also send progress updates and handoffs on request.",
+  "author": {
+    "name": "Mula",
+    "email": "nikita@mula.tools",
+    "url": "https://mula.tools"
+  },
+  "homepage": "https://mula.tools/coding-agent-help",
+  "repository": "https://github.com/mula-ai/mula-plugins",
+  "license": "MIT",
+  "keywords": ["mula", "product", "handoff", "work-update", "project-tracking", "automation"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Mula",
+    "shortDescription": "Keep Mula current as you code",
+    "longDescription": "Mula turns your coding sessions into up-to-date work your team can follow. Say “Set up Mula for this project” once: Codex signs you in, turns on automatic updates for the project you approve, and imports its recent history. Automatic updates send only your prompts and Codex's final replies in that project, through a visible project-local hook you approve; Mula never reads your files, tool calls or other projects, and does not recover activity from times Codex was closed. You can also share progress updates and handoffs on request.",
+    "developerName": "Mula",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Write", "Automation"],
+    "websiteURL": "https://mula.tools",
+    "supportURL": "https://mula.tools/coding-agent-help",
+    "privacyPolicyURL": "https://mula.tools/privacy",
+    "termsOfServiceURL": "https://mula.tools/terms",
+    "defaultPrompt": [
+      "Set up Mula for this project.",
+      "Share a progress update with Mula.",
+      "Prepare and share a handoff with Mula."
+    ],
+    "brandColor": "#8B1538",
+    "brandColorDark": "#E0527F",
+    "composerIcon": "./assets/composer-icon.png",
+    "logo": "./assets/logo.png",
+    "screenshots": []
+  },
+  "mcpServers": "./.mcp.json"
+}

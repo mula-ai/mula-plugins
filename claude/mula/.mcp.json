@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mula": {
+      "type": "http",
+      "url": "https://mula.tools/mcp"
+    }
+  }
+}

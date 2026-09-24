@@ -1,0 +1,27 @@
+{
+  "name": "mula",
+  "owner": {
+    "name": "Mula",
+    "email": "nikita@mula.tools",
+    "url": "https://mula.tools"
+  },
+  "description": "Mula plugins for Claude Code: keep Mula current with your coding work.",
+  "plugins": [
+    {
+      "name": "mula",
+      "displayName": "Mula",
+      "source": "./claude/mula",
+      "description": "Keep Mula current with your coding work. One prompt signs you in, turns on automatic updates for the project you approve, and imports its recent history; you can also send progress updates and handoffs on request.",
+      "author": {
+        "name": "Mula",
+        "email": "nikita@mula.tools",
+        "url": "https://mula.tools"
+      },
+      "homepage": "https://mula.tools/coding-agent-help",
+      "repository": "https://github.com/mula-ai/mula-plugins",
+      "license": "MIT",
+      "keywords": ["mula", "work-updates", "handoff", "project-tracking", "automation", "mcp"],
+      "category": "productivity"
+    }
+  ]
+}
