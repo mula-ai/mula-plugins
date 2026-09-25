@@ -33,17 +33,20 @@ the user has to act, and continue when they say they are done.
    and name it. When several are, ask which one this folder belongs to;
    never guess from the folder name, remote URL or list order.
 3. **Automatic updates.** When status shows automatic capture enabled with
-   a binding for that label, set it up now as described in "Automatic
-   forward updates"; the setup request is the user's explicit request. The
-   user approves the file change and trusts the hook. When it is not
-   enabled, skip it and say they can turn it on in Mula.
+   a binding for that label, ask before adding the hook, in a sentence or
+   two: from now on each prompt the user types in this project and your
+   final reply go to Mula exactly as typed, nothing else, so secrets do not
+   belong in those prompts. Add it only after they say yes, as described in
+   "Automatic forward updates": coding apps' safety reviews refuse the file
+   change without that yes. When automatic capture is not enabled, skip
+   this and say they can turn it on in Mula.
 4. **Recent history.** When `history_import` shows `requested` for that
    label, import it now as described in "Import recent history", using the
    window Mula returns; do not ask for dates. Otherwise skip it.
-5. **Confirm.** Tell the user in a few lines: the workspace and project,
-   whether automatic updates are on and what they still have to approve or
-   restart, and how many sessions and turns the import sent. Send no test
-   report unless they ask for one.
+5. **Confirm.** Tell the user in a few lines: the workspace and project, how
+   many sessions and turns the import sent and, when you added the hook, what
+   is left for them to turn it on in this app (see "Automatic forward
+   updates"). Send no test report unless they ask for one.
 
 ## Manual reports
 
@@ -129,8 +132,9 @@ session that started it, marked with `helper`.
 
 ## Automatic forward updates
 
-Configure automatic updates only after the user explicitly requests them (a
-request to set up Mula counts) and status says all of the following:
+Configure automatic updates only after the user said yes to them knowing what
+they send: tell them first and wait for the yes (a request to set up Mula is
+not that yes; see step 3 above). Status must also say all of the following:
 
 - automatic capture is available and enabled;
 - the user chose an exact returned project label;
@@ -152,10 +156,14 @@ transcript paths, tool arguments, tool results, or Mula tool traffic. There is
 no general secret scrubber: warn that secrets typed into an allowed prompt or
 response are part of that explicitly enabled content category.
 
-After writing the file, ask the host to review/trust the hooks. Check Mula
-status after the next eligible event; “awaiting project configuration and host
-trust” is not synced. Host startup can precede MCP readiness, and hooks never
-block coding or force continuation.
+After writing the file, tell the user how the hooks turn on: Claude Code
+reloads its settings files and applies the new hooks to the running session.
+If the next prompt does not reach Mula, ask them to check that the three Mula
+hooks are listed in `/hooks`, or to start a new session in this folder. You
+cannot see the hooks run yourself: check Mula status after the next eligible
+event; “awaiting project configuration and host trust” is not synced. Host
+startup can precede MCP readiness, and hooks never block coding or force
+continuation.
 
 Automatic mode is forward-only while the app, plugin, authorization, and MCP
 connection are active. It does not wake a closed app, read historical

@@ -18,9 +18,13 @@ active Mula content hook to the plugin package, user settings, project-shared
 3. Confirm the file is ignored; when needed, resolve the repository-local Git
    exclude file for that checkout (including linked-worktree indirection), add
    `/.claude/settings.local.json`, then verify it remains untracked.
-4. Show the user the exact merge and preserve every unrelated setting or hook.
-5. Ask the user to inspect the Local Settings hooks with `/hooks`. Never bypass
-   the host's normal controls.
+4. Tell the user what the hooks send and wait for their yes: Claude Code's
+   safety checks refuse this settings change without it. Then show the exact
+   merge and preserve every unrelated setting or hook.
+5. Claude Code applies the new hooks to the running session. If the next
+   prompt does not reach Mula, ask the user to check that the three Mula hooks
+   are listed in `/hooks` (Local Settings), or to start a new session in this
+   folder. Never bypass the host's normal controls.
 
 Do not copy the file into another repository, worktree, fork, imported project,
 or member checkout. Remove it before copying the project directory. Configure

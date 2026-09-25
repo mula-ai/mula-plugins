@@ -17,9 +17,15 @@ shared/managed configuration. Before writing in a Git repository:
 3. Resolve the repository-local Git exclude file for that checkout (including
    linked-worktree indirection), add `/.codex/hooks.json`, then verify the file
    remains untracked.
-4. Show the user the exact merge. Preserve every unrelated hook.
-5. Ask the user to inspect and trust the resulting project hook in Codex. Never
-   bypass hook trust.
+4. Tell the user what the hooks send and wait for their yes: Codex's safety
+   review refuses this file change without it. Then show the exact merge and
+   preserve every unrelated hook.
+5. Tell the user where to trust the hooks, because Codex runs no new or
+   changed hook until it is trusted. In the Codex app: Settings, then Hooks,
+   then Trust on each of the four Mula hooks listed under this project (Reload
+   hooks if they are missing). The Codex CLI asks at its next start: Trust all
+   and continue. The hooks run from the next chat in this folder. Never bypass
+   hook trust.
 
 Do not copy the file into another repository, worktree, fork, imported project,
 or member checkout. Remove it before copying the project directory. Configure

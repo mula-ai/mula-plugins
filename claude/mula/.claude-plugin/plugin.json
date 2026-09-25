@@ -1,7 +1,7 @@
 {
   "name": "mula",
   "displayName": "Mula",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Keep Mula current with your coding work. One prompt signs you in, turns on automatic updates for the project you approve, and imports its recent history; you can also send progress updates and handoffs on request.",
   "author": {
     "name": "Mula",
